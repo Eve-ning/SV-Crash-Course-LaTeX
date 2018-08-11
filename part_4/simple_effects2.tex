@@ -1,0 +1,71 @@
+\section{Act, Counteract and Closure}
+For one of the simplest and most common effects, most mappers goes through 3 steps of creation
+\begin{itemize}
+	\item Act: The main effect you want to create
+	\item Counteract: The effect that \textit{evens out the Visual Spacing}
+	\item Closure: This is usually to normalize the SV back to 1.0, as to "close" the sequence
+\end{itemize}
+Let's take a look at each of these in detail and what they do.
+
+\subsubsection{The Act}
+As explained, this is the \textbf{main source} of the effect. What you want to achieve in the effect should be done here. \newline
+Take for example:
+\begin{itemize}
+	\item \textbf{An effect that noticeably jumps forward once a note is hit} \newline
+		  We should expect a \textit{reasonably high value SV} to achieve this effect.\newline For simplicity, we will only use up to $1.9$, I will explain why in the \textbf{Half-half Concept} topic.
+	\item \textbf{An weak effect that will barely affect gameplay, but enough for players to notice once a note is hit} \newline
+		  We should expect a \textit{relatively weak SV} as compared to the above example. \newline
+		  We can consider anything in the range of $1.2 \longleftrightarrow 1.5$ where is tame, but not too close to 1.0.
+\end{itemize}
+
+\subsubsection{The Counteract}
+As you'll expect, you will end up with \textbf{Uneven Visual Spacing} if you just stop here, so this one mainly targets that issue and corrects it. We'll go into detail how to do this later.
+
+\subsubsection{The Closure}
+The closure is the SV that closes the SV sequence, returning everything to normal. This is so that the rest of the chart isn't affected by \textbf{Act or Counteract SV}.
+
+\subsection{Breakdown of Effects}
+
+\subfile{../part_4/figs/se_fig1.tex}
+
+This is one of the most common and simpler effects to show. This produces a "jump" effect, where it speeds up, then comes to stop. The "jump" is mainly shown by \textbf{1.5x}, hence it's the Act. The "fix" is reliant on the value of your Act, it is calculated to be \textbf{0.5x}.
+
+Last but not least, the closure, the scroll speed multiplier that you want the rest of the chart to go at. \newline
+Here's two more examples on how this works
+
+\subfile{../part_4/figs/se_fig2.tex}
+\subfile{../part_4/figs/se_fig3.tex}
+
+\subsection{The Half-Half Rule}
+
+This rule works \textbf{if and only if} \textit{your second SV is halfway in between the first and third}.
+
+Notice how all of the effects have certain values that work, here's short list of valid SVs that works in those situations, see what you can deduce from this
+
+\subfile{../part_4/figs/se_table1.tex}
+
+We can say that...
+
+\[ \frac{SV_{Act} + SV_{C.Act}}{2} = SV_{Closure} = SV_{Average} \]
+
+OR
+
+If your $SV_{Average} = 1.0x$, then...
+
+\[ SV_{Act} + SV_{C.Act} = 2.0 \]
+
+This is the \textbf{Half-Half Rule}, all SVs created with this \textbf{will average to 1.0}. 
+\newpage
+
+\subsubsection{How it Works}
+Avoiding the more complicated mathematics, we can explain this with some diagrams.
+
+\subfile{../part_4/figs/se_calcfig1.tex}
+
+This is a simplified diagram for a \textbf{Half-Half Rule} situation, all SVs are represented in the boxes. When we \textbf{displace} 0.5x SV we can easily shift it to the other SV so it still has \textbf{the same area}. In other words, if it has \textbf{the same area}, it will always be \textbf{Even Visual Spacing}.
+
+Let's take a lot at a few more examples:
+
+\subfile{../part_4/figs/se_calcfig2.tex}
+
+This is simple mathematics, we actually don't need diagrams. However, this is essential in helping you understand the more dynamic cases, where you can't use the \textbf{Half-Half Rule}.

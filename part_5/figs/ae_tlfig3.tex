@@ -1,0 +1,22 @@
+\subsection{Breakdown of an Advanced Effect [3]}
+Note: We want to have a Visual Spacing with reference to \textbf{0.75x}.
+
+\begin{tikzpicture}
+
+\draw [thick] (0,0) -- (10,0) node [anchor=west] {SV};
+\draw [thick, ->] (0,-0.75) -- (10,-0.75) node [anchor=west] {Offset (ms)};
+\foreach \x in {0,10,20,30,40,50,60,70,80,90}
+    \draw (0.1*\x cm,-0.75) -- (0.1*\x cm,-0.70) node[anchor=north] {\x};
+
+\draw (0.0,0.0)  -- (0.0,0.1)  node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{2.0x}};
+\draw (2.0,0.0)  -- (2.0,0.1)  node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{X}};
+\draw (10.0,0.0) -- (10.0,0.1) node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{0.75x}};
+
+\draw [decorate,decoration={brace,amplitude=7pt}](0.0,0.25) -- (2.0,0.25);
+\draw [decorate,decoration={brace,amplitude=7pt}](2.0,0.25) -- (10.0,0.25);
+
+\draw (1,1) node {\textcolor{blue}{Act}};
+\draw (6,1) node {\textcolor{blue}{Counteract}};
+\draw (10,1) node  {\textcolor{blue}{Closure}};
+
+\end{tikzpicture}

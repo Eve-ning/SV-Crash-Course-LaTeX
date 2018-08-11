@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Slider Velocity Crash Course}
+\author{Evening}
+\date{}
+
+\usepackage{tikz}
+\usepackage{subfiles}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\hfuzz = 1pt
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\definecolor{darkgreen}{RGB}{12, 125, 28}
+
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\part{Preface}
+\subfile{../part_1/preface.tex}
+
+\newpage
+\part{Introduction}
+\subfile{../part_2/introduction.tex}
+
+\newpage
+\part{Normalization}
+\subfile{../part_3/normalization.tex}
+
+\newpage
+\part{Simple Effects}
+\subfile{../part_4/simple_effects1.tex}
+\subfile{../part_4/simple_effects2.tex}
+	
+\newpage
+\part{Advanced Effects}
+\subfile{../part_5/advanced_effects.tex}
+
+\newpage
+\subfile{../annex/annex.tex}
+\end{document}

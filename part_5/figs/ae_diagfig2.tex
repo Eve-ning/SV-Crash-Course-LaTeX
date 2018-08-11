@@ -1,0 +1,52 @@
+\begin{tikzpicture}
+
+\draw [fill=green] (0,0) rectangle (3,1);
+\draw [fill=darkgreen] (3,0) rectangle (5,1);
+
+\draw [dashed] (0,0) rectangle (5,1.0);
+
+\draw [thick] (0,-0.3) -- (5,-0.3);
+\foreach \x in {0,60,100}
+    \draw (0.05*\x,-0.3) -- (0.05*\x,-0.25) node[anchor=north] {$\x$ms};
+    
+\draw [thick] (-0.3,0) -- (-0.3,4);
+\foreach \x in {0,1,2,3,4}
+    \draw (-0.3,\x) -- (-0.25,\x) node[anchor=east] {$\x$.0};
+
+
+\draw (2.5,-1.3) node {Offset};
+
+\end{tikzpicture}   
+\begin{tikzpicture}
+
+\draw [fill=green] (0,0) rectangle (3,0.2);
+\draw [fill=green] (3,1) rectangle (5,2.2);
+\draw [fill=darkgreen] (3,0) rectangle (5,1);
+
+\draw [->, thick] (1.5,1) .. controls (1.5,1.5) .. (3,1.5);
+
+\draw [dashed] (0,0) rectangle (5,1.0);
+
+\draw [thick] (0,-0.3) -- (5,-0.3);
+\foreach \x in {0,60,100}
+    \draw (0.05*\x,-0.3) -- (0.05*\x,-0.25) node[anchor=north] {$\x$ms};
+    
+\draw [thick] (-0.3,0) -- (-0.3,4);
+\foreach \x in {0,1,2,3,4}
+    \draw (-0.3,\x) -- (-0.25,\x) node[anchor=east] {$\x$.0};
+    
+\draw (-0.3,0.2) -- (-0.25,0.2) node[anchor=south east] {0.2};
+
+\draw (-0.3,2.2) -- (-0.25,2.2) node[anchor=south east] {X};
+\draw [dotted] (-0.3,2.2) -- (3,2.2);
+
+\draw (2.5,-1.3) node {Offset};
+
+\draw [<-] (1,0.2) -- (1,1.5) node[anchor=south] {A};
+\draw (4,1.5) node {B};
+\draw [white] (4,0.5) node {C};
+
+\end{tikzpicture}   
+
+\noindent
+\textbf{No SV Reference \textit{(left)} vs. SV Reference \textit{(right)}}

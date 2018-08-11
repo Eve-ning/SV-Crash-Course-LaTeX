@@ -1,0 +1,52 @@
+This document will mainly touch on basics of SV creation, most of the advanced work on SVs should be done by you.
+This will not touch on anything advanced, such as:
+\begin{itemize}
+\item Complex SV creations
+\item BPM Mapping
+\item Automated Creation of TimingPoints
+\item p-Notes / Fake Notes
+\end{itemize}
+
+I’ll try to be as unbiased as possible when writing this document, please take this as a point of reference rather than a rule of thumb, the limitations much further than what this document will cover.
+
+\section{Starting Out}
+
+\subsection{Adding your First SVs}
+\begin{itemize}
+    \item Ctrl+Shift+P adds an SV Line
+    \item Ctrl+P adds a BPM Line
+\end{itemize}
+Note for \textbf{new mappers}: \newline 
+\textit{It is possible to add multiple SV/BPM lines at one single time stamp. For most cases, SVs on top of SVs \textbf{OR} BPMs on top of BPMs will generate \underline{undefined behavior}, so try to avoid it. \newline
+However, SVs on top of BPMs may be used to \textbf{Normalize}, in which will be a future covered topic.}
+
+\subsection{Defining your SV Values}
+The value directly \textbf{multiplies into} the scroll speed the player is currently running on, so \textbf{2.0} scrolls \underline{twice as fast} as \textbf{1.0}.
+\subsubsection{Boundaries}
+osu!mania only supports $0.1 \longleftrightarrow 10.0$. \newline Contrary to being able to use $0.01 \longleftrightarrow 0.10$, there is no effect on the map.
+
+\subsection{BPM Effects}
+If you have encountered a multi-BPM map, you'll notice that BPM lines will affect scroll speed too. It works similar to SVs, where \textbf{200 BPM} sections will scroll \underline{twice as fast} as \textbf{100 BPM} sections.
+
+\subsection{Always consider Slider Velocities over BPM Lines}
+There are 2 ways to manipulate scroll speed, through BPM and SV. You can take it as a rule of thumb to \textbf{NEVER} use BPM to change scroll speed unless you know what you're doing! I'll list down the pros and cons below. \newline
+Take note that the context is to \underline{only use BPM for scroll speed manipulation}
+
+\subsubsection{Pros of BPM usage}
+\begin{itemize}
+    \item Very wide limits $(0 \longleftrightarrow inf)$
+    \item Can generate/affect measure lines
+    \item Arguably easier to calculate when used in Multi-BPM maps
+\end{itemize}
+
+\subsubsection{Cons of BPM usage}
+\begin{itemize}
+    \item Not intuitive on creation of extreme values
+    \item Inaccuracies when rounding to 3 decimal places \textit{$eg. \sim 33.333$}
+    \item Due to osu!mania being reliant on snap mapping, it will be not intuitive to map with an altered BPM when creating effects.
+    \item BPM Lines will lie on integer offsets, hence with non-integer beat lengths, the original BPM offset will start to sway.
+    \item Extreme BPM lines can crash the editor
+    \item And many more...
+\end{itemize}
+\underline{To summarize, do not use BPM Lines unless you know what you are doing.} \newline
+\textbf{I will not be covering BPM scroll speed manipulation in this document.}

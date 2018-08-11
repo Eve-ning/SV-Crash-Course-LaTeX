@@ -1,0 +1,20 @@
+\subsubsection{Breakdown of a Simple Effect [3]}
+\begin{tikzpicture}
+
+\draw [thick] (0,0) -- (10,0) node [anchor=west] {SV};
+\draw [thick, ->] (0,-0.75) -- (10,-0.75) node [anchor=west] {Offset};
+\foreach \x in {0,1,2,3,4,5,6,7,8,9}
+    \draw (\x cm,-0.75) -- (\x cm,-0.70) node[anchor=north] {$\x$};
+
+\draw (0.0,0.0)  -- (0.0,0.1)  node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{0.3x}};
+\draw (5.0,0.0)  -- (5.0,0.1)  node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{1.7x}};
+\draw (10.0,0.0) -- (10.0,0.1) node [anchor=north,yshift=-0.7mm]{\textcolor{darkgreen}{1.0x}};
+
+\draw [decorate,decoration={brace,amplitude=7pt}](0.0,0.25) -- (5.0,0.25);
+\draw [decorate,decoration={brace,amplitude=7pt}](5.0,0.25) -- (10.0,0.25);
+
+\draw (2.5,1) node {\textcolor{blue}{Counteract}};
+\draw (7.5,1) node {\textcolor{blue}{Act}};
+\draw (10,1) node  {\textcolor{blue}{Closure}};
+
+\end{tikzpicture}

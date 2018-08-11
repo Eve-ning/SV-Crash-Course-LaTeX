@@ -1,0 +1,127 @@
+This will be the final chapter in the document. So if you've understood everything so far, you're well on your way to mastering it already.
+
+\section{Visualizing Everything}
+
+\subfile{../part_5/figs/ae_tlfig1.tex}
+
+How would we get the value required to create \textbf{Even Visual Spacing}? The simple answer is to refer back to the diagrams we drew previously and work from there.
+
+\subfile{../part_5/figs/ae_diagfig1.tex}
+\newline
+One way we can deduce the value there is through \textbf{calculation of Area}.
+\newline
+Before we delve into the calculation, we need to first know what is the shaded area called. I personally coin it as \textbf{Distance} because it defines how far the notes will travel, and \textbf{Distance} defined as:
+
+\[ SV * Offset = Distance \]
+Important Rule of Thumb: 
+\begin{center}
+   \textbf{SV Sequences with equal Distances will have Even Visual Spacing with respect to each other}
+\end{center}
+\newpage
+
+\subsubsection{Calculation with Geometry}
+
+This is the simpler but longer way of calculating the unknown. If you prefer using \textbf{equations} you can skip to the following section.
+
+First and foremost, we need to understand that in both diagrams, they have the same shaded area (Distance), so if we can calculate the \textit{shifted area} (indicated by the arrow), we can calculate X.
+
+We first calculate the shifted area as shown:
+
+\[ Area_B = SV * Offset = 2.0 * 20 = 40 \]
+\[ Area_B + Area_C = SV * Offset = 1.0 * 80 = 80 \]
+\[ Area_C = (Area_B + Area_C) - Area_B = 80 - 40 = 40 \]
+\[ Area_C = SV * Offset = X * 80 = 40 \]
+\[ X = 0.5 \]
+
+Note: There are some steps that you can avoid with different approaches.
+
+\subsubsection{Calculation with Equations}
+
+This is the harder but shorter way of calculating the unknown. If you prefer using \textbf{Geometry} read the previous section.
+
+Looking at the \textbf{Left Diagram}, we can calculate \textbf{Distance}:
+
+\[ Distance = SV_{Total} * Offset_{Total} = 1.0 * 100 = 100 \]
+
+Note: We can usually skip this step and assume $Distance = Offset$ because most of the time we use 1.0x as the $SV_{Total}$, and we know anything multiplied by 1.0 is the same.\newline
+We know that the total of the colored area (Distance) never changes because \underline{Distance remains the same} so that \underline{Visual Spacing remains even}. We can then calculate $X$.
+
+\[ SV_1 * Offset_1 + SV_2 * Offset_2 = Distance = 100\]
+\[ 3.0 * 20 + X * 80 = 100\]
+\[ X = 0.5\]
+
+These are the 2 ways you can calculate unknown SVs.
+Let's take a look at more examples: \newpage
+
+\subfile{../part_5/figs/ae_tlfig2.tex}
+
+\subfile{../part_5/figs/ae_diagfig2.tex}
+
+\subsubsection{Calculation with Geometry}
+
+\[ Area_A = SV * Offset = 0.2 * 60 = 12 \]
+\[ Area_A + Area_B = SV * Offset = 1.0 * 60 = 60 \]
+\[ Area_B = (Area_A + Area_B) - Area_A = 60 - 12 = 48 \]
+\[ Area_B = SV * Offset = (X - 1.0) * 40 = 48 \]
+\[ X = 1.2 \]
+
+\subsubsection{Calculation with Equations}
+
+Calculation of Expected Distance:
+\[ Distance = SV_{Total} * Offset_{Total} = 1.0 * 100 = 100 \]
+
+Solving the Equation:
+\[ SV_1 * Offset_1 + SV_2 * Offset_2 = Distance = 100\]
+\[ 0.2 * 60 + X * 40 = 100\]
+\[ X = 1.2\]
+\newpage
+
+\subfile{../part_5/figs/ae_tlfig3.tex}
+
+\subfile{../part_5/figs/ae_diagfig3.tex}
+
+\subsubsection{Calculation with Geometry}
+
+\[ Area_B = SV * Offset = 1.25 * 20 = 25 \]
+\[ Area_B + Area_C = SV * Offset = 0.75 * 80 = 60 \]
+\[ Area_C = (Area_B + Area_C) - Area_B = 60 - 25 = 35 \]
+\[ Area_C = SV * Offset = X * 80 = 35 \]
+\[ X = 0.4375 \approx 0.44 (2d.p.) \]
+
+\subsubsection{Calculation with Equations}
+
+Note the $SV_{Total}$.
+
+\textcolor{red}{Calculation of Expected Distance:}
+\[ Distance = SV_{Total} * Offset_{Total} = 0.75 * 100 = 75 \]
+
+Solving the Equation:
+\[ SV_1 * Offset_1 + SV_2 * Offset_2 = Distance = 75\]
+\[ 2.0 * 20 + X * 80 = 75\]
+\[ X = 0.4375 \approx 0.44 (2d.p.)\]
+\newpage
+
+\subfile{../part_5/figs/ae_tlfig4.tex}
+
+\subfile{../part_5/figs/ae_diagfig4.tex}
+
+\subsubsection{Calculation with Geometry}
+
+\[ Area_B = SV * Offset = 1.0 * 20 = 20 \]
+\[ Area_B + Area_C = SV * Offset = 1 * 40 = 40 \]
+\[ Area_C = (Area_B + Area_C) - Area_B = 40 - 20 = 20 \]
+\[ Area_C = SV * Offset = X * 40 = 20 \]
+\[ X = 0.5 \]
+
+\subsubsection{Calculation with Equations}
+
+Note the $Offset_{Total}$.
+
+\textcolor{red}{Calculation of Expected Distance:}
+\[ Distance = SV_{Total} * Offset_{Total} = 1.0 * 60 = 60 \]
+
+Solving the Equation:
+\[ SV_1 * Offset_1 + SV_2 * Offset_2 = Distance = 60\]
+\[ 2.0 * 20 + X * 40 = 60\]
+\[ X = 0.5\]
+\newpage

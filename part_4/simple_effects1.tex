@@ -1,0 +1,30 @@
+If you've read the previous topic, you should be able to understand this topic better, if you haven't, that's fine, I'll still guide you through from square one.
+
+\noindent
+Before we go into putting multiple SVs together, we have to understand the effects of SVs, down to the core. We'll start with something that is not commonly talked about: \textbf{Visual Spacing}
+
+\section{Visual Spacing}
+Visual Spacing is the space in between notes that players will see, this gives the indication on if the note is a certain snap. Eg. $1/4$ notes will always have \textbf{half} the spacing of $1/2$ since it's \textbf{twice as fast}.\newline
+Consider this scenario. Visually, all of these diagrams look like they are 1/4 snaps
+
+\subfile{../part_4/figs/se_vsfig1.tex}
+
+It's obvious how that works, but watch what happens when you \textbf{add SVs and move notes around} on the next scenario. \newpage
+
+\subfile{../part_4/figs/se_vsfig2.tex}
+
+\subsection{Uneven Visual Spacing}
+
+With regards to what an SV does, a 0.5x SV will make \textbf{1/2 spacing} visually look like \textbf{1/4 spacing} but it will STILL play as if it was on \textbf{1/2 spacing}. This is an \textit{uneven} SV Effect because it distorts the \textbf{Visual Spacing}. 
+
+\subsection{Downsides of Uneven Visual Spacing}
+
+With \textbf{unexpected} uneven visual spacing/SV, players will be \textbf{expecting a certain snap}, but instead, is \textbf{greeted with another snap}.\newline
+Referring to the previous diagram, we can see that the player will be \textbf{expecting a 1/4 snap} for all 4 notes. However, since a \textbf{0.5x} SV was implemented, \textbf{the first 2 notes will play as if it was 1/2 apart}
+\noindent
+Here's another example for easier digestion
+
+\subfile{../part_4/figs/se_vsfig3.tex}
+
+Now you understand the effects of SV on notes, we can go onto how to make SVs that create \textbf{Even Visual Spacing}, in the following topic.\newpage
+
